@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 namespace gestion_pharmacie
 {
-    public partial class AjouterMedicamentForm : Form
+    public partial class AjouterMedicament : Form
     {
-        public AjouterMedicamentForm()
+        public AjouterMedicament()
         {
             InitializeComponent();
         }
@@ -14,24 +14,52 @@ namespace gestion_pharmacie
         {
             try
             {
-                // Vérification simple des champs obligatoires
+                // Validation des champs
+                if (string.IsNullOrWhiteSpace(txtReference.Text))
+                {
+                    MessageBox.Show("Veuillez saisir la référence du médicament.", "Champ obligatoire",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtReference.Focus();
+                    return;
+                }
+
                 if (string.IsNullOrWhiteSpace(txtNom.Text))
                 {
-                    MessageBox.Show("Veuillez saisir le nom du médicament.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Veuillez saisir le nom du médicament.", "Champ obligatoire",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtNom.Focus();
                     return;
                 }
 
                 if (string.IsNullOrWhiteSpace(txtDescription.Text))
                 {
-                    MessageBox.Show("Veuillez saisir la description du médicament.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Veuillez saisir la description du médicament.", "Champ obligatoire",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtDescription.Focus();
                     return;
                 }
 
-                // Créer un objet medicament avec les valeurs du formulaire
+                if (nudPrix.Value <= 0)
+                {
+                    MessageBox.Show("Le prix doit être supérieur à 0.", "Valeur invalide",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    nudPrix.Focus();
+                    return;
+                }
+
+                if (dtpDateP.Value <= dtpDateE.Value)
+                {
+                    MessageBox.Show("La date de péremption doit être postérieure à la date d'entrée.",
+                        "Dates invalides", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Créer l'objet médicament
                 medicament med = new medicament(
-                    idM: 0, // Id auto-incrémenté ou généré par la DB
-                    nom: txtNom.Text,
-                    description_medicament: txtDescription.Text,
+                    idM: 0,
+                    reference: txtReference.Text.Trim(),
+                    nom: txtNom.Text.Trim(),
+                    description_medicament: txtDescription.Text.Trim(),
                     prix: (float)nudPrix.Value,
                     quantite_stock: (int)nudQuantite.Value,
                     seuil_alerte: (int)nudSeuil.Value,
@@ -39,24 +67,38 @@ namespace gestion_pharmacie
                     dateP: DateOnly.FromDateTime(dtpDateP.Value)
                 );
 
-                // Appel de la méthode pour ajouter à la base de données
+                // Ajouter à la base de données
                 med.ajouter_medicament();
 
-                MessageBox.Show("Médicament ajouté avec succès !", "Succès", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Médicament ajouté avec succès !", "Succès",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // Réinitialiser les champs
-                txtNom.Text = "";
-                txtDescription.Text = "";
-                nudPrix.Value = 0;
-                nudQuantite.Value = 0;
-                nudSeuil.Value = 0;
-                dtpDateE.Value = DateTime.Today;
-                dtpDateP.Value = DateTime.Today;
+                // Réinitialiser le formulaire
+                ResetForm();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erreur lors de l'ajout : " + ex.Message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Erreur lors de l'ajout :\n{ex.Message}", "Erreur",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void BtnAnnuler_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void ResetForm()
+        {
+            txtReference.Clear();
+            txtNom.Clear();
+            txtDescription.Clear();
+            nudPrix.Value = 0;
+            nudQuantite.Value = 0;
+            nudSeuil.Value = 10;
+            dtpDateE.Value = DateTime.Today;
+            dtpDateP.Value = DateTime.Today.AddYears(1);
+            txtReference.Focus();
         }
     }
 }
