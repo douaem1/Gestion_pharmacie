@@ -7,6 +7,7 @@ namespace gestion_pharmacie
     {
         public AjouterMedicament()
         {
+            this.AutoScroll = true;
             InitializeComponent();
         }
 
@@ -99,6 +100,17 @@ namespace gestion_pharmacie
             dtpDateE.Value = DateTime.Today;
             dtpDateP.Value = DateTime.Today.AddYears(1);
             txtReference.Focus();
+        }
+
+        private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+            // Décale tous les contrôles verticalement selon la valeur de la scrollbar
+            foreach (Control ctrl in this.Controls)
+            {
+                // On ignore la scrollbar elle-même
+                if (ctrl != vScrollBar1)
+                    ctrl.Top = ctrl.Top - (e.NewValue - e.OldValue);
+            }
         }
     }
 }

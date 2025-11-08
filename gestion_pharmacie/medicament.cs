@@ -43,6 +43,7 @@ namespace gestion_pharmacie
             this.dateP = dateP;
         }
 
+        // ==================== GETTERS ====================
         public int getIdM()
         {
             return idM;
@@ -88,6 +89,7 @@ namespace gestion_pharmacie
             return dateP;
         }
 
+        // ==================== SETTERS ====================
         public void setReference(string reference)
         {
             this.reference = reference;
@@ -133,11 +135,13 @@ namespace gestion_pharmacie
             this.idM = idM;
         }
 
+        // ==================== MÉTHODES ====================
         public void toString()
         {
             Console.WriteLine("idM: " + idM + " reference: " + reference + " nom: " + nom + " description_medicament: " + description_medicament + " prix: " + prix + " quantite_stock: " + quantite_stock + " seuil_alerte: " + seuil_alerte + " dateE: " + dateE + " dateP: " + dateP);
         }
 
+        // ➕ AJOUTER un médicament
         public void ajouter_medicament()
         {
             using (SqlConnection conn = new SqlConnection(ConnectionString))
@@ -161,6 +165,165 @@ namespace gestion_pharmacie
                     cmd.ExecuteNonQuery();
                 }
             }
+        }
+
+        // 📋 RÉCUPÉRER tous les médicaments (STATIC)
+        public static List<medicament> get_all_medicaments()
+        {
+            List<medicament> medicaments = new List<medicament>();
+            string ConnectionString = "Data Source=LAPTOP-S4HO4VR1;Initial Catalog=gestion_pharmacie;Integrated Security=SSPI;TrustServerCertificate=True;";
+
+            using (SqlConnection conn = new SqlConnection(ConnectionString))
+            {
+                conn.Open();
+                string query = "SELECT * FROM medicament ORDER BY nom";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    using (Microsoft.Data.SqlClient.SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            medicament med = new medicament(
+                                idM: reader.GetInt32(reader.GetOrdinal("idM")),
+                                reference: reader.GetString(reader.GetOrdinal("reference")),
+                                nom: reader.GetString(reader.GetOrdinal("nom")),
+                                description_medicament: reader.GetString(reader.GetOrdinal("description_medicament")),
+                                prix: (float)reader.GetDouble(reader.GetOrdinal("prix")),
+                                quantite_stock: reader.GetInt32(reader.GetOrdinal("quantite_stock")),
+                                seuil_alerte: reader.GetInt32(reader.GetOrdinal("seuil_alerte")),
+                                dateE: DateOnly.FromDateTime(reader.GetDateTime(reader.GetOrdinal("dateE"))),
+                                dateP: DateOnly.FromDateTime(reader.GetDateTime(reader.GetOrdinal("dateP")))
+                            );
+                            medicaments.Add(med);
+                        }
+                    }
+                }
+            }
+
+            return medicaments;
+        }
+
+        // ⚠️ OBTENIR les médicaments en alerte (stock < seuil) (STATIC)
+        public static List<medicament> get_medicaments_en_alerte()
+        {
+            List<medicament> medicaments = new List<medicament>();
+            string ConnectionString = "Data Source=LAPTOP-S4HO4VR1;Initial Catalog=gestion_pharmacie;Integrated Security=SSPI;TrustServerCertificate=True;";
+
+            using (SqlConnection conn = new SqlConnection(ConnectionString))
+            {
+                conn.Open();
+                string query = "SELECT * FROM medicament WHERE quantite_stock < seuil_alerte ORDER BY quantite_stock";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    using (Microsoft.Data.SqlClient.SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            medicament med = new medicament(
+                                idM: reader.GetInt32(reader.GetOrdinal("idM")),
+                                reference: reader.GetString(reader.GetOrdinal("reference")),
+                                nom: reader.GetString(reader.GetOrdinal("nom")),
+                                description_medicament: reader.GetString(reader.GetOrdinal("description_medicament")),
+                                prix: (float)reader.GetDouble(reader.GetOrdinal("prix")),
+                                quantite_stock: reader.GetInt32(reader.GetOrdinal("quantite_stock")),
+                                seuil_alerte: reader.GetInt32(reader.GetOrdinal("seuil_alerte")),
+                                dateE: DateOnly.FromDateTime(reader.GetDateTime(reader.GetOrdinal("dateE"))),
+                                dateP: DateOnly.FromDateTime(reader.GetDateTime(reader.GetOrdinal("dateP")))
+                            );
+                            medicaments.Add(med);
+                        }
+                    }
+                }
+            }
+
+            return medicaments;
+        }
+
+        // 📅 OBTENIR les médicaments bientôt périmés (STATIC)
+        public static List<medicament> get_medicaments_bientot_perimes(int jours = 30)
+        {
+            List<medicament> medicaments = new List<medicament>();
+            string ConnectionString = "Data Source=LAPTOP-S4HO4VR1;Initial Catalog=gestion_pharmacie;Integrated Security=SSPI;TrustServerCertificate=True;";
+            DateTime dateLimit = DateTime.Today.AddDays(jours);
+
+            using (SqlConnection conn = new SqlConnection(ConnectionString))
+            {
+                conn.Open();
+                string query = "SELECT * FROM medicament WHERE dateP <= @dateLimit AND dateP >= @today ORDER BY dateP";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@dateLimit", dateLimit);
+                    cmd.Parameters.AddWithValue("@today", DateTime.Today);
+
+                    using (Microsoft.Data.SqlClient.SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            medicament med = new medicament(
+                                idM: reader.GetInt32(reader.GetOrdinal("idM")),
+                                reference: reader.GetString(reader.GetOrdinal("reference")),
+                                nom: reader.GetString(reader.GetOrdinal("nom")),
+                                description_medicament: reader.GetString(reader.GetOrdinal("description_medicament")),
+                                prix: (float)reader.GetDouble(reader.GetOrdinal("prix")),
+                                quantite_stock: reader.GetInt32(reader.GetOrdinal("quantite_stock")),
+                                seuil_alerte: reader.GetInt32(reader.GetOrdinal("seuil_alerte")),
+                                dateE: DateOnly.FromDateTime(reader.GetDateTime(reader.GetOrdinal("dateE"))),
+                                dateP: DateOnly.FromDateTime(reader.GetDateTime(reader.GetOrdinal("dateP")))
+                            );
+                            medicaments.Add(med);
+                        }
+                    }
+                }
+            }
+
+            return medicaments;
+        }
+
+        // 💰 CALCULER la valeur totale du stock (STATIC)
+        public static float calculer_valeur_stock()
+        {
+            string ConnectionString = "Data Source=LAPTOP-S4HO4VR1;Initial Catalog=gestion_pharmacie;Integrated Security=SSPI;TrustServerCertificate=True;";
+            float valeurTotale = 0;
+
+            using (SqlConnection conn = new SqlConnection(ConnectionString))
+            {
+                conn.Open();
+                string query = "SELECT SUM(prix * quantite_stock) AS valeur_totale FROM medicament";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    object result = cmd.ExecuteScalar();
+                    if (result != DBNull.Value)
+                    {
+                        valeurTotale = Convert.ToSingle(result);
+                    }
+                }
+            }
+
+            return valeurTotale;
+        }
+
+        // 📊 COMPTER le nombre de médicaments (STATIC)
+        public static int compter_medicaments()
+        {
+            string ConnectionString = "Data Source=LAPTOP-S4HO4VR1;Initial Catalog=gestion_pharmacie;Integrated Security=SSPI;TrustServerCertificate=True;";
+            int count = 0;
+
+            using (SqlConnection conn = new SqlConnection(ConnectionString))
+            {
+                conn.Open();
+                string query = "SELECT COUNT(*) FROM medicament";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    count = (int)cmd.ExecuteScalar();
+                }
+            }
+
+            return count;
         }
     }
 }

@@ -20,115 +20,113 @@
 
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtNomUtilisateur = new System.Windows.Forms.TextBox();
-            this.txtMotDePasse = new System.Windows.Forms.TextBox();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.btnRegister = new System.Windows.Forms.Button();
-            this.labelTitre = new System.Windows.Forms.Label();
-            this.SuspendLayout();
-
-            // 
-            // labelTitre
-            // 
-            this.labelTitre.AutoSize = true;
-            this.labelTitre.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
-            this.labelTitre.Location = new System.Drawing.Point(110, 20);
-            this.labelTitre.Name = "labelTitre";
-            this.labelTitre.Size = new System.Drawing.Size(208, 37);
-            this.labelTitre.TabIndex = 0;
-            this.labelTitre.Text = "Connexion 🔐";
-
+            label1 = new Label();
+            label2 = new Label();
+            txtNomUtilisateur = new TextBox();
+            txtMotDePasse = new TextBox();
+            btnLogin = new Button();
+            btnRegister = new Button();
+            labelTitre = new Label();
+            SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label1.Location = new System.Drawing.Point(40, 90);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 23);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Nom utilisateur :";
-
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 10F);
+            label1.Location = new Point(35, 68);
+            label1.Name = "label1";
+            label1.Size = new Size(110, 19);
+            label1.TabIndex = 1;
+            label1.Text = "Nom utilisateur :";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label2.Location = new System.Drawing.Point(40, 150);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 23);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Mot de passe :";
-
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 10F);
+            label2.Location = new Point(35, 112);
+            label2.Name = "label2";
+            label2.Size = new Size(99, 19);
+            label2.TabIndex = 2;
+            label2.Text = "Mot de passe :";
             // 
             // txtNomUtilisateur
             // 
-            this.txtNomUtilisateur.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtNomUtilisateur.Location = new System.Drawing.Point(190, 85);
-            this.txtNomUtilisateur.Name = "txtNomUtilisateur";
-            this.txtNomUtilisateur.Size = new System.Drawing.Size(200, 30);
-            this.txtNomUtilisateur.TabIndex = 3;
-
+            txtNomUtilisateur.Font = new Font("Segoe UI", 10F);
+            txtNomUtilisateur.Location = new Point(166, 64);
+            txtNomUtilisateur.Margin = new Padding(3, 2, 3, 2);
+            txtNomUtilisateur.Name = "txtNomUtilisateur";
+            txtNomUtilisateur.Size = new Size(176, 25);
+            txtNomUtilisateur.TabIndex = 3;
             // 
             // txtMotDePasse
             // 
-            this.txtMotDePasse.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtMotDePasse.Location = new System.Drawing.Point(190, 145);
-            this.txtMotDePasse.Name = "txtMotDePasse";
-            this.txtMotDePasse.PasswordChar = '*';
-            this.txtMotDePasse.Size = new System.Drawing.Size(200, 30);
-            this.txtMotDePasse.TabIndex = 4;
-
+            txtMotDePasse.Font = new Font("Segoe UI", 10F);
+            txtMotDePasse.Location = new Point(166, 109);
+            txtMotDePasse.Margin = new Padding(3, 2, 3, 2);
+            txtMotDePasse.Name = "txtMotDePasse";
+            txtMotDePasse.PasswordChar = '*';
+            txtMotDePasse.Size = new Size(176, 25);
+            txtMotDePasse.TabIndex = 4;
             // 
             // btnLogin
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(70, 210);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(130, 40);
-            this.btnLogin.TabIndex = 5;
-            this.btnLogin.Text = "Connexion";
-            this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-
+            btnLogin.BackColor = Color.MediumSeaGreen;
+            btnLogin.FlatStyle = FlatStyle.Flat;
+            btnLogin.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            btnLogin.ForeColor = Color.White;
+            btnLogin.Location = new Point(61, 158);
+            btnLogin.Margin = new Padding(3, 2, 3, 2);
+            btnLogin.Name = "btnLogin";
+            btnLogin.Size = new Size(114, 30);
+            btnLogin.TabIndex = 5;
+            btnLogin.Text = "Connexion";
+            btnLogin.UseVisualStyleBackColor = false;
+            btnLogin.Click += btnLogin_Click;
             // 
             // btnRegister
             // 
-            this.btnRegister.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegister.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnRegister.ForeColor = System.Drawing.Color.White;
-            this.btnRegister.Location = new System.Drawing.Point(240, 210);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(130, 40);
-            this.btnRegister.TabIndex = 6;
-            this.btnRegister.Text = "S'inscrire";
-            this.btnRegister.UseVisualStyleBackColor = false;
-            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
-
+            btnRegister.BackColor = Color.SteelBlue;
+            btnRegister.FlatStyle = FlatStyle.Flat;
+            btnRegister.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            btnRegister.ForeColor = Color.White;
+            btnRegister.Location = new Point(210, 158);
+            btnRegister.Margin = new Padding(3, 2, 3, 2);
+            btnRegister.Name = "btnRegister";
+            btnRegister.Size = new Size(114, 30);
+            btnRegister.TabIndex = 6;
+            btnRegister.Text = "S'inscrire";
+            btnRegister.UseVisualStyleBackColor = false;
+            btnRegister.Click += btnRegister_Click;
+            // 
+            // labelTitre
+            // 
+            labelTitre.AutoSize = true;
+            labelTitre.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
+            labelTitre.Location = new Point(96, 15);
+            labelTitre.Name = "labelTitre";
+            labelTitre.Size = new Size(159, 30);
+            labelTitre.TabIndex = 0;
+            labelTitre.Text = "Connexion 🔐";
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(430, 300);
-            this.Controls.Add(this.labelTitre);
-            this.Controls.Add(this.btnRegister);
-            this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.txtMotDePasse);
-            this.Controls.Add(this.txtNomUtilisateur);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Name = "LoginForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Connexion - Gestion Pharmacie";
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(376, 225);
+            Controls.Add(labelTitre);
+            Controls.Add(btnRegister);
+            Controls.Add(btnLogin);
+            Controls.Add(txtMotDePasse);
+            Controls.Add(txtNomUtilisateur);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "LoginForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Connexion - Gestion Pharmacie";
+            //Load += LoginForm_Load;
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

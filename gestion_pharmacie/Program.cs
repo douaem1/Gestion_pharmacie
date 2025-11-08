@@ -8,6 +8,8 @@ namespace gestion_pharmacie
         [STAThread]
         static void Main()
         {
+            // Activer la gestion DPI haute résolution
+            Application.SetHighDpiMode(HighDpiMode.SystemAware);
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();

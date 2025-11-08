@@ -19,9 +19,13 @@ namespace gestion_pharmacie
             if (Utilisateur.Login(nom, mdp))
             {
                 MessageBox.Show("Connexion réussie !");
+
+                // Crée et ouvre le form d'accueil
+                AccueilForm accueil = new AccueilForm();
+                accueil.Show();
                 // 👉 ouvrir le menu principal ou autre form
                 this.Hide();
-                
+
             }
             else
             {

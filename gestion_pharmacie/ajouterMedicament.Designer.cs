@@ -28,399 +28,458 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelHeader = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.lblSubtitle = new System.Windows.Forms.Label();
-            this.panelMain = new Guna.UI2.WinForms.Guna2Panel();
-            this.separator1 = new Guna.UI2.WinForms.Guna2Separator();
-            this.lblReference = new System.Windows.Forms.Label();
-            this.txtReference = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lblNom = new System.Windows.Forms.Label();
-            this.txtNom = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lblDescription = new System.Windows.Forms.Label();
-            this.txtDescription = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lblPrix = new System.Windows.Forms.Label();
-            this.nudPrix = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.lblQuantite = new System.Windows.Forms.Label();
-            this.nudQuantite = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.lblSeuil = new System.Windows.Forms.Label();
-            this.nudSeuil = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.lblDateE = new System.Windows.Forms.Label();
-            this.dtpDateE = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.lblDateP = new System.Windows.Forms.Label();
-            this.dtpDateP = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.btnAjouter = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAnnuler = new Guna.UI2.WinForms.Guna2Button();
-            this.panelHeader.SuspendLayout();
-            this.panelMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPrix)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudQuantite)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSeuil)).BeginInit();
-            this.SuspendLayout();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            panelHeader = new Guna.UI2.WinForms.Guna2Panel();
+            lblTitle = new Label();
+            lblSubtitle = new Label();
+            panelMain = new Guna.UI2.WinForms.Guna2Panel();
+            vScrollBar1 = new VScrollBar();
+            btnAnnuler = new Guna.UI2.WinForms.Guna2Button();
+            btnAjouter = new Guna.UI2.WinForms.Guna2Button();
+            dtpDateP = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            lblDateP = new Label();
+            dtpDateE = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            lblDateE = new Label();
+            nudSeuil = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            lblSeuil = new Label();
+            nudQuantite = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            lblQuantite = new Label();
+            nudPrix = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            lblPrix = new Label();
+            txtDescription = new Guna.UI2.WinForms.Guna2TextBox();
+            lblDescription = new Label();
+            txtNom = new Guna.UI2.WinForms.Guna2TextBox();
+            lblNom = new Label();
+            txtReference = new Guna.UI2.WinForms.Guna2TextBox();
+            lblReference = new Label();
+            separator1 = new Guna.UI2.WinForms.Guna2Separator();
+            panelHeader.SuspendLayout();
+            panelMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)nudSeuil).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudQuantite).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudPrix).BeginInit();
+            SuspendLayout();
             // 
             // panelHeader
             // 
-            this.panelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.panelHeader.Controls.Add(this.lblTitle);
-            this.panelHeader.Controls.Add(this.lblSubtitle);
-            this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelHeader.Location = new System.Drawing.Point(0, 0);
-            this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(600, 100);
-            this.panelHeader.TabIndex = 0;
+            panelHeader.BackColor = Color.FromArgb(94, 148, 255);
+            panelHeader.Controls.Add(lblTitle);
+            panelHeader.Controls.Add(lblSubtitle);
+            panelHeader.CustomizableEdges = customizableEdges1;
+            panelHeader.Dock = DockStyle.Top;
+            panelHeader.Location = new Point(0, 0);
+            panelHeader.Margin = new Padding(4, 3, 4, 3);
+            panelHeader.Name = "panelHeader";
+            panelHeader.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            panelHeader.Size = new Size(700, 98);
+            panelHeader.TabIndex = 0;
             // 
             // lblTitle
             // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(30, 20);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(307, 32);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Ajouter un Médicament";
+            lblTitle.AutoSize = true;
+            lblTitle.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitle.ForeColor = Color.White;
+            lblTitle.Location = new Point(35, 23);
+            lblTitle.Margin = new Padding(4, 0, 4, 0);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(286, 32);
+            lblTitle.TabIndex = 0;
+            lblTitle.Text = "Ajouter un Médicament";
             // 
             // lblSubtitle
             // 
-            this.lblSubtitle.AutoSize = true;
-            this.lblSubtitle.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubtitle.ForeColor = System.Drawing.Color.White;
-            this.lblSubtitle.Location = new System.Drawing.Point(30, 55);
-            this.lblSubtitle.Name = "lblSubtitle";
-            this.lblSubtitle.Size = new System.Drawing.Size(362, 19);
-            this.lblSubtitle.TabIndex = 1;
-            this.lblSubtitle.Text = "Remplissez les informations du nouveau médicament";
+            lblSubtitle.AutoSize = true;
+            lblSubtitle.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblSubtitle.ForeColor = Color.White;
+            lblSubtitle.Location = new Point(35, 63);
+            lblSubtitle.Margin = new Padding(4, 0, 4, 0);
+            lblSubtitle.Name = "lblSubtitle";
+            lblSubtitle.Size = new Size(332, 19);
+            lblSubtitle.TabIndex = 1;
+            lblSubtitle.Text = "Remplissez les informations du nouveau médicament";
             // 
             // panelMain
             // 
-            this.panelMain.BackColor = System.Drawing.Color.White;
-            this.panelMain.Controls.Add(this.btnAnnuler);
-            this.panelMain.Controls.Add(this.btnAjouter);
-            this.panelMain.Controls.Add(this.dtpDateP);
-            this.panelMain.Controls.Add(this.lblDateP);
-            this.panelMain.Controls.Add(this.dtpDateE);
-            this.panelMain.Controls.Add(this.lblDateE);
-            this.panelMain.Controls.Add(this.nudSeuil);
-            this.panelMain.Controls.Add(this.lblSeuil);
-            this.panelMain.Controls.Add(this.nudQuantite);
-            this.panelMain.Controls.Add(this.lblQuantite);
-            this.panelMain.Controls.Add(this.nudPrix);
-            this.panelMain.Controls.Add(this.lblPrix);
-            this.panelMain.Controls.Add(this.txtDescription);
-            this.panelMain.Controls.Add(this.lblDescription);
-            this.panelMain.Controls.Add(this.txtNom);
-            this.panelMain.Controls.Add(this.lblNom);
-            this.panelMain.Controls.Add(this.txtReference);
-            this.panelMain.Controls.Add(this.lblReference);
-            this.panelMain.Controls.Add(this.separator1);
-            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(0, 100);
-            this.panelMain.Name = "panelMain";
-            this.panelMain.Padding = new System.Windows.Forms.Padding(30, 20, 30, 30);
-            this.panelMain.Size = new System.Drawing.Size(600, 630);
-            this.panelMain.TabIndex = 1;
+            panelMain.BackColor = Color.White;
+            panelMain.Controls.Add(vScrollBar1);
+            panelMain.Controls.Add(btnAnnuler);
+            panelMain.Controls.Add(btnAjouter);
+            panelMain.Controls.Add(dtpDateP);
+            panelMain.Controls.Add(lblDateP);
+            panelMain.Controls.Add(dtpDateE);
+            panelMain.Controls.Add(lblDateE);
+            panelMain.Controls.Add(nudSeuil);
+            panelMain.Controls.Add(lblSeuil);
+            panelMain.Controls.Add(nudQuantite);
+            panelMain.Controls.Add(lblQuantite);
+            panelMain.Controls.Add(nudPrix);
+            panelMain.Controls.Add(lblPrix);
+            panelMain.Controls.Add(txtDescription);
+            panelMain.Controls.Add(lblDescription);
+            panelMain.Controls.Add(txtNom);
+            panelMain.Controls.Add(lblNom);
+            panelMain.Controls.Add(txtReference);
+            panelMain.Controls.Add(lblReference);
+            panelMain.Controls.Add(separator1);
+            panelMain.CustomizableEdges = customizableEdges23;
+            panelMain.Dock = DockStyle.Fill;
+            panelMain.Location = new Point(0, 98);
+            panelMain.Margin = new Padding(4, 3, 4, 3);
+            panelMain.Name = "panelMain";
+            panelMain.Padding = new Padding(35, 23, 35, 35);
+            panelMain.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            panelMain.Size = new Size(700, 651);
+            panelMain.TabIndex = 1;
             // 
-            // separator1
+            // vScrollBar1
             // 
-            this.separator1.Location = new System.Drawing.Point(30, 20);
-            this.separator1.Name = "separator1";
-            this.separator1.Size = new System.Drawing.Size(540, 10);
-            this.separator1.TabIndex = 0;
-            // 
-            // lblReference
-            // 
-            this.lblReference.AutoSize = true;
-            this.lblReference.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReference.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblReference.Location = new System.Drawing.Point(30, 50);
-            this.lblReference.Name = "lblReference";
-            this.lblReference.Size = new System.Drawing.Size(90, 19);
-            this.lblReference.TabIndex = 1;
-            this.lblReference.Text = "Référence *";
-            // 
-            // txtReference
-            // 
-            this.txtReference.BorderRadius = 8;
-            this.txtReference.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtReference.DefaultText = "";
-            this.txtReference.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtReference.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtReference.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtReference.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtReference.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtReference.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtReference.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtReference.Location = new System.Drawing.Point(30, 75);
-            this.txtReference.Name = "txtReference";
-            this.txtReference.PasswordChar = '\0';
-            this.txtReference.PlaceholderText = "Ex: MED-2025-001";
-            this.txtReference.SelectedText = "";
-            this.txtReference.Size = new System.Drawing.Size(540, 40);
-            this.txtReference.TabIndex = 2;
-            // 
-            // lblNom
-            // 
-            this.lblNom.AutoSize = true;
-            this.lblNom.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblNom.Location = new System.Drawing.Point(30, 130);
-            this.lblNom.Name = "lblNom";
-            this.lblNom.Size = new System.Drawing.Size(182, 19);
-            this.lblNom.TabIndex = 3;
-            this.lblNom.Text = "Nom du médicament *";
-            // 
-            // txtNom
-            // 
-            this.txtNom.BorderRadius = 8;
-            this.txtNom.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNom.DefaultText = "";
-            this.txtNom.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtNom.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtNom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNom.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNom.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNom.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtNom.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNom.Location = new System.Drawing.Point(30, 155);
-            this.txtNom.Name = "txtNom";
-            this.txtNom.PasswordChar = '\0';
-            this.txtNom.PlaceholderText = "Ex: Paracétamol 500mg";
-            this.txtNom.SelectedText = "";
-            this.txtNom.Size = new System.Drawing.Size(540, 40);
-            this.txtNom.TabIndex = 4;
-            // 
-            // lblDescription
-            // 
-            this.lblDescription.AutoSize = true;
-            this.lblDescription.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblDescription.Location = new System.Drawing.Point(30, 210);
-            this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(104, 19);
-            this.lblDescription.TabIndex = 5;
-            this.lblDescription.Text = "Description *";
-            // 
-            // txtDescription
-            // 
-            this.txtDescription.BorderRadius = 8;
-            this.txtDescription.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDescription.DefaultText = "";
-            this.txtDescription.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtDescription.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtDescription.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDescription.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDescription.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDescription.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtDescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDescription.Location = new System.Drawing.Point(30, 235);
-            this.txtDescription.Multiline = true;
-            this.txtDescription.Name = "txtDescription";
-            this.txtDescription.PasswordChar = '\0';
-            this.txtDescription.PlaceholderText = "Décrivez les indications et posologie...";
-            this.txtDescription.SelectedText = "";
-            this.txtDescription.Size = new System.Drawing.Size(540, 80);
-            this.txtDescription.TabIndex = 6;
-            // 
-            // lblPrix
-            // 
-            this.lblPrix.AutoSize = true;
-            this.lblPrix.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrix.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblPrix.Location = new System.Drawing.Point(30, 330);
-            this.lblPrix.Name = "lblPrix";
-            this.lblPrix.Size = new System.Drawing.Size(76, 19);
-            this.lblPrix.TabIndex = 7;
-            this.lblPrix.Text = "Prix (DH) *";
-            // 
-            // nudPrix
-            // 
-            this.nudPrix.BackColor = System.Drawing.Color.Transparent;
-            this.nudPrix.BorderRadius = 8;
-            this.nudPrix.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.nudPrix.DecimalPlaces = 2;
-            this.nudPrix.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.nudPrix.Location = new System.Drawing.Point(30, 355);
-            this.nudPrix.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.nudPrix.Name = "nudPrix";
-            this.nudPrix.Size = new System.Drawing.Size(165, 40);
-            this.nudPrix.TabIndex = 8;
-            this.nudPrix.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            // 
-            // lblQuantite
-            // 
-            this.lblQuantite.AutoSize = true;
-            this.lblQuantite.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuantite.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblQuantite.Location = new System.Drawing.Point(217, 330);
-            this.lblQuantite.Name = "lblQuantite";
-            this.lblQuantite.Size = new System.Drawing.Size(135, 19);
-            this.lblQuantite.TabIndex = 9;
-            this.lblQuantite.Text = "Quantité en stock";
-            // 
-            // nudQuantite
-            // 
-            this.nudQuantite.BackColor = System.Drawing.Color.Transparent;
-            this.nudQuantite.BorderRadius = 8;
-            this.nudQuantite.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.nudQuantite.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.nudQuantite.Location = new System.Drawing.Point(217, 355);
-            this.nudQuantite.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.nudQuantite.Name = "nudQuantite";
-            this.nudQuantite.Size = new System.Drawing.Size(165, 40);
-            this.nudQuantite.TabIndex = 10;
-            this.nudQuantite.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            // 
-            // lblSeuil
-            // 
-            this.lblSeuil.AutoSize = true;
-            this.lblSeuil.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSeuil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblSeuil.Location = new System.Drawing.Point(405, 330);
-            this.lblSeuil.Name = "lblSeuil";
-            this.lblSeuil.Size = new System.Drawing.Size(103, 19);
-            this.lblSeuil.TabIndex = 11;
-            this.lblSeuil.Text = "Seuil d\'alerte";
-            // 
-            // nudSeuil
-            // 
-            this.nudSeuil.BackColor = System.Drawing.Color.Transparent;
-            this.nudSeuil.BorderRadius = 8;
-            this.nudSeuil.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.nudSeuil.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.nudSeuil.Location = new System.Drawing.Point(405, 355);
-            this.nudSeuil.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.nudSeuil.Name = "nudSeuil";
-            this.nudSeuil.Size = new System.Drawing.Size(165, 40);
-            this.nudSeuil.TabIndex = 12;
-            this.nudSeuil.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.nudSeuil.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            // 
-            // lblDateE
-            // 
-            this.lblDateE.AutoSize = true;
-            this.lblDateE.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblDateE.Location = new System.Drawing.Point(30, 410);
-            this.lblDateE.Name = "lblDateE";
-            this.lblDateE.Size = new System.Drawing.Size(108, 19);
-            this.lblDateE.TabIndex = 13;
-            this.lblDateE.Text = "Date d\'entrée";
-            // 
-            // dtpDateE
-            // 
-            this.dtpDateE.BorderRadius = 8;
-            this.dtpDateE.Checked = true;
-            this.dtpDateE.FillColor = System.Drawing.Color.White;
-            this.dtpDateE.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.dtpDateE.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDateE.Location = new System.Drawing.Point(30, 435);
-            this.dtpDateE.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtpDateE.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtpDateE.Name = "dtpDateE";
-            this.dtpDateE.Size = new System.Drawing.Size(255, 40);
-            this.dtpDateE.TabIndex = 14;
-            this.dtpDateE.Value = new System.DateTime(2025, 11, 8, 0, 0, 0, 0);
-            // 
-            // lblDateP
-            // 
-            this.lblDateP.AutoSize = true;
-            this.lblDateP.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblDateP.Location = new System.Drawing.Point(315, 410);
-            this.lblDateP.Name = "lblDateP";
-            this.lblDateP.Size = new System.Drawing.Size(155, 19);
-            this.lblDateP.TabIndex = 15;
-            this.lblDateP.Text = "Date de péremption";
-            // 
-            // dtpDateP
-            // 
-            this.dtpDateP.BorderRadius = 8;
-            this.dtpDateP.Checked = true;
-            this.dtpDateP.FillColor = System.Drawing.Color.White;
-            this.dtpDateP.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.dtpDateP.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDateP.Location = new System.Drawing.Point(315, 435);
-            this.dtpDateP.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtpDateP.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtpDateP.Name = "dtpDateP";
-            this.dtpDateP.Size = new System.Drawing.Size(255, 40);
-            this.dtpDateP.TabIndex = 16;
-            this.dtpDateP.Value = new System.DateTime(2026, 11, 8, 0, 0, 0, 0);
-            // 
-            // btnAjouter
-            // 
-            this.btnAjouter.BorderRadius = 8;
-            this.btnAjouter.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAjouter.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAjouter.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAjouter.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAjouter.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnAjouter.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.btnAjouter.ForeColor = System.Drawing.Color.White;
-            this.btnAjouter.Location = new System.Drawing.Point(370, 530);
-            this.btnAjouter.Name = "btnAjouter";
-            this.btnAjouter.Size = new System.Drawing.Size(200, 45);
-            this.btnAjouter.TabIndex = 17;
-            this.btnAjouter.Text = "✓ Ajouter";
-            this.btnAjouter.Click += new System.EventHandler(this.BtnAjouter_Click);
+            vScrollBar1.Location = new Point(686, 0);
+            vScrollBar1.Name = "vScrollBar1";
+            vScrollBar1.Size = new Size(14, 651);
+            vScrollBar1.TabIndex = 20;
+            vScrollBar1.Scroll += vScrollBar1_Scroll;
             // 
             // btnAnnuler
             // 
-            this.btnAnnuler.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnAnnuler.BorderRadius = 8;
-            this.btnAnnuler.BorderThickness = 2;
-            this.btnAnnuler.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAnnuler.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAnnuler.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAnnuler.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAnnuler.FillColor = System.Drawing.Color.White;
-            this.btnAnnuler.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.btnAnnuler.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnAnnuler.Location = new System.Drawing.Point(150, 530);
-            this.btnAnnuler.Name = "btnAnnuler";
-            this.btnAnnuler.Size = new System.Drawing.Size(200, 45);
-            this.btnAnnuler.TabIndex = 18;
-            this.btnAnnuler.Text = "✕ Annuler";
-            this.btnAnnuler.Click += new System.EventHandler(this.BtnAnnuler_Click);
+            btnAnnuler.BorderColor = Color.FromArgb(94, 148, 255);
+            btnAnnuler.BorderRadius = 8;
+            btnAnnuler.BorderThickness = 2;
+            btnAnnuler.CustomizableEdges = customizableEdges3;
+            btnAnnuler.DisabledState.BorderColor = Color.DarkGray;
+            btnAnnuler.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnAnnuler.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnAnnuler.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnAnnuler.FillColor = Color.White;
+            btnAnnuler.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            btnAnnuler.ForeColor = Color.FromArgb(94, 148, 255);
+            btnAnnuler.Location = new Point(359, 587);
+            btnAnnuler.Margin = new Padding(4, 3, 4, 3);
+            btnAnnuler.Name = "btnAnnuler";
+            btnAnnuler.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnAnnuler.Size = new Size(139, 35);
+            btnAnnuler.TabIndex = 18;
+            btnAnnuler.Text = "✕ Annuler";
+            btnAnnuler.Click += BtnAnnuler_Click;
+            // 
+            // btnAjouter
+            // 
+            btnAjouter.BorderRadius = 8;
+            btnAjouter.CustomizableEdges = customizableEdges5;
+            btnAjouter.DisabledState.BorderColor = Color.DarkGray;
+            btnAjouter.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnAjouter.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnAjouter.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnAjouter.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            btnAjouter.ForeColor = Color.White;
+            btnAjouter.Location = new Point(515, 587);
+            btnAjouter.Margin = new Padding(4, 3, 4, 3);
+            btnAjouter.Name = "btnAjouter";
+            btnAjouter.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnAjouter.Size = new Size(149, 35);
+            btnAjouter.TabIndex = 17;
+            btnAjouter.Text = "✓ Ajouter";
+            btnAjouter.Click += BtnAjouter_Click;
+            // 
+            // dtpDateP
+            // 
+            dtpDateP.BorderRadius = 8;
+            dtpDateP.Checked = true;
+            dtpDateP.CustomizableEdges = customizableEdges7;
+            dtpDateP.FillColor = Color.White;
+            dtpDateP.Font = new Font("Segoe UI", 10F);
+            dtpDateP.Format = DateTimePickerFormat.Short;
+            dtpDateP.Location = new Point(368, 502);
+            dtpDateP.Margin = new Padding(4, 3, 4, 3);
+            dtpDateP.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            dtpDateP.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
+            dtpDateP.Name = "dtpDateP";
+            dtpDateP.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            dtpDateP.Size = new Size(298, 46);
+            dtpDateP.TabIndex = 16;
+            dtpDateP.Value = new DateTime(2026, 11, 8, 0, 0, 0, 0);
+            // 
+            // lblDateP
+            // 
+            lblDateP.AutoSize = true;
+            lblDateP.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblDateP.ForeColor = Color.FromArgb(64, 64, 64);
+            lblDateP.Location = new Point(368, 473);
+            lblDateP.Margin = new Padding(4, 0, 4, 0);
+            lblDateP.Name = "lblDateP";
+            lblDateP.Size = new Size(144, 19);
+            lblDateP.TabIndex = 15;
+            lblDateP.Text = "Date de péremption";
+            // 
+            // dtpDateE
+            // 
+            dtpDateE.BorderRadius = 8;
+            dtpDateE.Checked = true;
+            dtpDateE.CustomizableEdges = customizableEdges9;
+            dtpDateE.FillColor = Color.White;
+            dtpDateE.Font = new Font("Segoe UI", 10F);
+            dtpDateE.Format = DateTimePickerFormat.Short;
+            dtpDateE.Location = new Point(35, 502);
+            dtpDateE.Margin = new Padding(4, 3, 4, 3);
+            dtpDateE.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            dtpDateE.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
+            dtpDateE.Name = "dtpDateE";
+            dtpDateE.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            dtpDateE.Size = new Size(298, 46);
+            dtpDateE.TabIndex = 14;
+            dtpDateE.Value = new DateTime(2025, 11, 8, 0, 0, 0, 0);
+            // 
+            // lblDateE
+            // 
+            lblDateE.AutoSize = true;
+            lblDateE.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblDateE.ForeColor = Color.FromArgb(64, 64, 64);
+            lblDateE.Location = new Point(35, 473);
+            lblDateE.Margin = new Padding(4, 0, 4, 0);
+            lblDateE.Name = "lblDateE";
+            lblDateE.Size = new Size(100, 19);
+            lblDateE.TabIndex = 13;
+            lblDateE.Text = "Date d'entrée";
+            // 
+            // nudSeuil
+            // 
+            nudSeuil.BackColor = Color.Transparent;
+            nudSeuil.BorderRadius = 8;
+            nudSeuil.Cursor = Cursors.IBeam;
+            nudSeuil.CustomizableEdges = customizableEdges11;
+            nudSeuil.Font = new Font("Segoe UI", 10F);
+            nudSeuil.Location = new Point(472, 410);
+            nudSeuil.Margin = new Padding(4, 3, 4, 3);
+            nudSeuil.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
+            nudSeuil.Name = "nudSeuil";
+            nudSeuil.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            nudSeuil.Size = new Size(192, 46);
+            nudSeuil.TabIndex = 12;
+            nudSeuil.Value = new decimal(new int[] { 10, 0, 0, 0 });
+            // 
+            // lblSeuil
+            // 
+            lblSeuil.AutoSize = true;
+            lblSeuil.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSeuil.ForeColor = Color.FromArgb(64, 64, 64);
+            lblSeuil.Location = new Point(472, 381);
+            lblSeuil.Margin = new Padding(4, 0, 4, 0);
+            lblSeuil.Name = "lblSeuil";
+            lblSeuil.Size = new Size(97, 19);
+            lblSeuil.TabIndex = 11;
+            lblSeuil.Text = "Seuil d'alerte";
+            // 
+            // nudQuantite
+            // 
+            nudQuantite.BackColor = Color.Transparent;
+            nudQuantite.BorderRadius = 8;
+            nudQuantite.Cursor = Cursors.IBeam;
+            nudQuantite.CustomizableEdges = customizableEdges13;
+            nudQuantite.Font = new Font("Segoe UI", 10F);
+            nudQuantite.Location = new Point(253, 410);
+            nudQuantite.Margin = new Padding(4, 3, 4, 3);
+            nudQuantite.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
+            nudQuantite.Name = "nudQuantite";
+            nudQuantite.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            nudQuantite.Size = new Size(192, 46);
+            nudQuantite.TabIndex = 10;
+            // 
+            // lblQuantite
+            // 
+            lblQuantite.AutoSize = true;
+            lblQuantite.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblQuantite.ForeColor = Color.FromArgb(64, 64, 64);
+            lblQuantite.Location = new Point(253, 381);
+            lblQuantite.Margin = new Padding(4, 0, 4, 0);
+            lblQuantite.Name = "lblQuantite";
+            lblQuantite.Size = new Size(125, 19);
+            lblQuantite.TabIndex = 9;
+            lblQuantite.Text = "Quantité en stock";
+            // 
+            // nudPrix
+            // 
+            nudPrix.BackColor = Color.Transparent;
+            nudPrix.BorderRadius = 8;
+            nudPrix.Cursor = Cursors.IBeam;
+            nudPrix.CustomizableEdges = customizableEdges15;
+            nudPrix.DecimalPlaces = 2;
+            nudPrix.Font = new Font("Segoe UI", 10F);
+            nudPrix.Location = new Point(35, 410);
+            nudPrix.Margin = new Padding(4, 3, 4, 3);
+            nudPrix.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
+            nudPrix.Name = "nudPrix";
+            nudPrix.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            nudPrix.Size = new Size(192, 46);
+            nudPrix.TabIndex = 8;
+            // 
+            // lblPrix
+            // 
+            lblPrix.AutoSize = true;
+            lblPrix.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblPrix.ForeColor = Color.FromArgb(64, 64, 64);
+            lblPrix.Location = new Point(35, 381);
+            lblPrix.Margin = new Padding(4, 0, 4, 0);
+            lblPrix.Name = "lblPrix";
+            lblPrix.Size = new Size(81, 19);
+            lblPrix.TabIndex = 7;
+            lblPrix.Text = "Prix (DH) *";
+            // 
+            // txtDescription
+            // 
+            txtDescription.BorderRadius = 8;
+            txtDescription.Cursor = Cursors.IBeam;
+            txtDescription.CustomizableEdges = customizableEdges17;
+            txtDescription.DefaultText = "";
+            txtDescription.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtDescription.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtDescription.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtDescription.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtDescription.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtDescription.Font = new Font("Segoe UI", 10F);
+            txtDescription.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtDescription.Location = new Point(35, 271);
+            txtDescription.Margin = new Padding(4, 3, 4, 3);
+            txtDescription.Multiline = true;
+            txtDescription.Name = "txtDescription";
+            txtDescription.PlaceholderText = "Décrivez les indications et posologie...";
+            txtDescription.SelectedText = "";
+            txtDescription.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            txtDescription.Size = new Size(630, 92);
+            txtDescription.TabIndex = 6;
+            // 
+            // lblDescription
+            // 
+            lblDescription.AutoSize = true;
+            lblDescription.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblDescription.ForeColor = Color.FromArgb(64, 64, 64);
+            lblDescription.Location = new Point(35, 242);
+            lblDescription.Margin = new Padding(4, 0, 4, 0);
+            lblDescription.Name = "lblDescription";
+            lblDescription.Size = new Size(95, 19);
+            lblDescription.TabIndex = 5;
+            lblDescription.Text = "Description *";
+            // 
+            // txtNom
+            // 
+            txtNom.BorderRadius = 8;
+            txtNom.Cursor = Cursors.IBeam;
+            txtNom.CustomizableEdges = customizableEdges19;
+            txtNom.DefaultText = "";
+            txtNom.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtNom.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtNom.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtNom.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtNom.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtNom.Font = new Font("Segoe UI", 10F);
+            txtNom.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtNom.Location = new Point(35, 179);
+            txtNom.Margin = new Padding(4, 3, 4, 3);
+            txtNom.Name = "txtNom";
+            txtNom.PlaceholderText = "Ex: Paracétamol 500mg";
+            txtNom.SelectedText = "";
+            txtNom.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            txtNom.Size = new Size(630, 46);
+            txtNom.TabIndex = 4;
+            // 
+            // lblNom
+            // 
+            lblNom.AutoSize = true;
+            lblNom.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblNom.ForeColor = Color.FromArgb(64, 64, 64);
+            lblNom.Location = new Point(35, 150);
+            lblNom.Margin = new Padding(4, 0, 4, 0);
+            lblNom.Name = "lblNom";
+            lblNom.Size = new Size(160, 19);
+            lblNom.TabIndex = 3;
+            lblNom.Text = "Nom du médicament *";
+            // 
+            // txtReference
+            // 
+            txtReference.BorderRadius = 8;
+            txtReference.Cursor = Cursors.IBeam;
+            txtReference.CustomizableEdges = customizableEdges21;
+            txtReference.DefaultText = "";
+            txtReference.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtReference.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtReference.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtReference.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtReference.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtReference.Font = new Font("Segoe UI", 10F);
+            txtReference.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtReference.Location = new Point(35, 87);
+            txtReference.Margin = new Padding(4, 3, 4, 3);
+            txtReference.Name = "txtReference";
+            txtReference.PlaceholderText = "Ex: MED-2025-001";
+            txtReference.SelectedText = "";
+            txtReference.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            txtReference.Size = new Size(630, 46);
+            txtReference.TabIndex = 2;
+            // 
+            // lblReference
+            // 
+            lblReference.AutoSize = true;
+            lblReference.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblReference.ForeColor = Color.FromArgb(64, 64, 64);
+            lblReference.Location = new Point(35, 58);
+            lblReference.Margin = new Padding(4, 0, 4, 0);
+            lblReference.Name = "lblReference";
+            lblReference.Size = new Size(86, 19);
+            lblReference.TabIndex = 1;
+            lblReference.Text = "Référence *";
+            // 
+            // separator1
+            // 
+            separator1.Location = new Point(35, 23);
+            separator1.Margin = new Padding(4, 3, 4, 3);
+            separator1.Name = "separator1";
+            separator1.Size = new Size(630, 12);
+            separator1.TabIndex = 0;
             // 
             // AjouterMedicament
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(600, 730);
-            this.Controls.Add(this.panelMain);
-            this.Controls.Add(this.panelHeader);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "AjouterMedicament";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Gestion Pharmacie - Ajouter Médicament";
-            this.panelHeader.ResumeLayout(false);
-            this.panelHeader.PerformLayout();
-            this.panelMain.ResumeLayout(false);
-            this.panelMain.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPrix)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudQuantite)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSeuil)).EndInit();
-            this.ResumeLayout(false);
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
+            ClientSize = new Size(700, 749);
+            Controls.Add(panelMain);
+            Controls.Add(panelHeader);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            Margin = new Padding(4, 3, 4, 3);
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "AjouterMedicament";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Gestion Pharmacie - Ajouter Médicament";
+            panelHeader.ResumeLayout(false);
+            panelHeader.PerformLayout();
+            panelMain.ResumeLayout(false);
+            panelMain.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)nudSeuil).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudQuantite).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudPrix).EndInit();
+            ResumeLayout(false);
 
         }
 
@@ -449,5 +508,6 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpDateP;
         private Guna.UI2.WinForms.Guna2Button btnAjouter;
         private Guna.UI2.WinForms.Guna2Button btnAnnuler;
+        private VScrollBar vScrollBar1;
     }
 }

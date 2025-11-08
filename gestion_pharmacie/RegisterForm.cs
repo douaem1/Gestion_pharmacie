@@ -22,6 +22,10 @@ namespace gestion_pharmacie
             if (u.Register())
             {
                 MessageBox.Show("Inscription réussie !");
+                // Ouvre le Dashboard
+                AccueilForm accueil = new AccueilForm();
+                accueil.Show();
+
                 this.Close();
             }
             else
@@ -29,5 +33,6 @@ namespace gestion_pharmacie
                 MessageBox.Show("Erreur lors de l’inscription !");
             }
         }
+
     }
 }
