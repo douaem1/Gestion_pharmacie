@@ -1,0 +1,27 @@
+# Fichiers temporaires Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Fichiers binaires compilés
+bin/
+obj/
+
+# Packages NuGet
+*.nupkg
+*.snupkg
+packages/
+
+# Fichiers générés par le cache du projet
+*.dbmdl
+*.bak
+*.log
+
+# JetBrains Rider
+.idea/
+
+# Fichiers système
+Thumbs.db
+desktop.ini
