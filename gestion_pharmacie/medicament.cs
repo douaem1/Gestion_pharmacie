@@ -167,6 +167,174 @@ namespace gestion_pharmacie
             }
         }
 
+        public void modifier_medicament()
+        {
+            using (SqlConnection conn = new SqlConnection(ConnectionString))
+            {
+                conn.Open();
+                string query = @"UPDATE medicament 
+                                 SET reference = @reference,
+                                     nom = @nom, 
+                                     description_medicament = @description_medicament, 
+                                     prix = @prix, 
+                                     quantite_stock = @quantite_stock, 
+                                     seuil_alerte = @seuil_alerte, 
+                                     dateE = @dateE, 
+                                     dateP = @dateP
+                                 WHERE idM = @idM";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@idM", idM);
+                    cmd.Parameters.AddWithValue("@reference", reference);
+                    cmd.Parameters.AddWithValue("@nom", nom);
+                    cmd.Parameters.AddWithValue("@description_medicament", description_medicament);
+                    cmd.Parameters.AddWithValue("@prix", prix);
+                    cmd.Parameters.AddWithValue("@quantite_stock", quantite_stock);
+                    cmd.Parameters.AddWithValue("@seuil_alerte", seuil_alerte);
+                    cmd.Parameters.AddWithValue("@dateE", dateE.ToDateTime(new TimeOnly(0, 0)));
+                    cmd.Parameters.AddWithValue("@dateP", dateP.ToDateTime(new TimeOnly(0, 0)));
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+        public void supprimer_medicament()
+        {
+            using (SqlConnection conn = new SqlConnection(ConnectionString))
+            {
+                conn.Open();
+                string query = @"DELETE FROM medicament WHERE idM = @idM";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@idM", idM);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+        public static void supprimer_par_id(int idM)
+        {
+            string ConnectionString = "Data Source=DOUAE;Initial Catalog=gestion_pharmacie;Integrated Security=SSPI;TrustServerCertificate=True;";
+
+            using (SqlConnection conn = new SqlConnection(ConnectionString))
+            {
+                conn.Open();
+                string query = @"DELETE FROM medicament WHERE idM = @idM";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@idM", idM);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public static medicament rechercher_par_id(int id)
+        {
+            string ConnectionString = "Data Source=DOUAE;Initial Catalog=gestion_pharmacie;Integrated Security=SSPI;TrustServerCertificate=True;";
+
+            using (SqlConnection conn = new SqlConnection(ConnectionString))
+            {
+                conn.Open();
+                string query = "SELECT * FROM medicament WHERE idM = @idM";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@idM", id);
+
+                    using (Microsoft.Data.SqlClient.SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return new medicament(
+                                reader.GetInt32(reader.GetOrdinal("idM")),
+                                reader.GetString(reader.GetOrdinal("reference")),
+                                reader.GetString(reader.GetOrdinal("nom")),
+                                reader.GetString(reader.GetOrdinal("description_medicament")),
+                                (float)reader.GetDouble(reader.GetOrdinal("prix")),
+                                reader.GetInt32(reader.GetOrdinal("quantite_stock")),
+                                reader.GetInt32(reader.GetOrdinal("seuil_alerte")),
+                                DateOnly.FromDateTime(reader.GetDateTime(reader.GetOrdinal("dateE"))),
+                                DateOnly.FromDateTime(reader.GetDateTime(reader.GetOrdinal("dateP")))
+                            );
+                        }
+                    }
+                }
+            }
+            return null;
+        }
+        public static List<medicament> rechercher_par_nom(string nom)
+        {
+            string ConnectionString = "Data Source=DOUAE;Initial Catalog=gestion_pharmacie;Integrated Security=SSPI;TrustServerCertificate=True;";
+            List<medicament> medicaments = new List<medicament>();
+
+            using (SqlConnection conn = new SqlConnection(ConnectionString))
+            {
+                conn.Open();
+                string query = "SELECT * FROM medicament WHERE nom LIKE @nom";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@nom", "%" + nom + "%");
+
+                    using (Microsoft.Data.SqlClient.SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            medicaments.Add(new medicament(
+                                reader.GetInt32(reader.GetOrdinal("idM")),
+                                reader.GetString(reader.GetOrdinal("reference")),
+                                reader.GetString(reader.GetOrdinal("nom")),
+                                reader.GetString(reader.GetOrdinal("description_medicament")),
+                                (float)reader.GetDouble(reader.GetOrdinal("prix")),
+                                reader.GetInt32(reader.GetOrdinal("quantite_stock")),
+                                reader.GetInt32(reader.GetOrdinal("seuil_alerte")),
+                                DateOnly.FromDateTime(reader.GetDateTime(reader.GetOrdinal("dateE"))),
+                                DateOnly.FromDateTime(reader.GetDateTime(reader.GetOrdinal("dateP")))
+                            ));
+                        }
+                    }
+                }
+            }
+            return medicaments;
+        }
+
+        public static medicament rechercher_par_reference(string reference)
+        {
+            string ConnectionString = "Data Source=DOUAE;Initial Catalog=gestion_pharmacie;Integrated Security=SSPI;TrustServerCertificate=True;";
+
+            using (SqlConnection conn = new SqlConnection(ConnectionString))
+            {
+                conn.Open();
+                string query = "SELECT * FROM medicament WHERE reference = @reference";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@reference", reference);
+
+                    using (Microsoft.Data.SqlClient.SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return new medicament(
+                                reader.GetInt32(reader.GetOrdinal("idM")),
+                                reader.GetString(reader.GetOrdinal("reference")),
+                                reader.GetString(reader.GetOrdinal("nom")),
+                                reader.GetString(reader.GetOrdinal("description_medicament")),
+                                (float)reader.GetDouble(reader.GetOrdinal("prix")),
+                                reader.GetInt32(reader.GetOrdinal("quantite_stock")),
+                                reader.GetInt32(reader.GetOrdinal("seuil_alerte")),
+                                DateOnly.FromDateTime(reader.GetDateTime(reader.GetOrdinal("dateE"))),
+                                DateOnly.FromDateTime(reader.GetDateTime(reader.GetOrdinal("dateP")))
+                            );
+                        }
+                    }
+                }
+            }
+            return null;
+        }
+
         // 📋 RÉCUPÉRER tous les médicaments (STATIC)
         public static List<medicament> get_all_medicaments()
         {

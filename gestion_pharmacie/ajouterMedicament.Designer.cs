@@ -56,7 +56,6 @@
             lblTitle = new Label();
             lblSubtitle = new Label();
             panelMain = new Guna.UI2.WinForms.Guna2Panel();
-            vScrollBar1 = new VScrollBar();
             btnAnnuler = new Guna.UI2.WinForms.Guna2Button();
             btnAjouter = new Guna.UI2.WinForms.Guna2Button();
             dtpDateP = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -124,7 +123,6 @@
             // panelMain
             // 
             panelMain.BackColor = Color.White;
-            panelMain.Controls.Add(vScrollBar1);
             panelMain.Controls.Add(btnAnnuler);
             panelMain.Controls.Add(btnAjouter);
             panelMain.Controls.Add(dtpDateP);
@@ -153,14 +151,6 @@
             panelMain.ShadowDecoration.CustomizableEdges = customizableEdges24;
             panelMain.Size = new Size(700, 651);
             panelMain.TabIndex = 1;
-            // 
-            // vScrollBar1
-            // 
-            vScrollBar1.Location = new Point(686, 0);
-            vScrollBar1.Name = "vScrollBar1";
-            vScrollBar1.Size = new Size(14, 651);
-            vScrollBar1.TabIndex = 20;
-            vScrollBar1.Scroll += vScrollBar1_Scroll;
             // 
             // btnAnnuler
             // 
@@ -508,6 +498,5 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpDateP;
         private Guna.UI2.WinForms.Guna2Button btnAjouter;
         private Guna.UI2.WinForms.Guna2Button btnAnnuler;
-        private VScrollBar vScrollBar1;
     }
 }

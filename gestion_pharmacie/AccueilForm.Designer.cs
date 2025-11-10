@@ -98,7 +98,6 @@
             separator2 = new Guna.UI2.WinForms.Guna2Separator();
             btnAlerte = new Guna.UI2.WinForms.Guna2Button();
             panelMain = new Guna.UI2.WinForms.Guna2Panel();
-            vScrollBar1 = new VScrollBar();
             cardTotalMedicaments = new Guna.UI2.WinForms.Guna2Panel();
             lblTotalMedicamentsIcon = new Label();
             lblTotalMedicaments = new Label();
@@ -317,7 +316,6 @@
             // panelMain
             // 
             panelMain.BackColor = Color.FromArgb(241, 245, 249);
-            panelMain.Controls.Add(vScrollBar1);
             panelMain.Controls.Add(cardTotalMedicaments);
             panelMain.Controls.Add(cardAlerte);
             panelMain.Controls.Add(cardPeremption);
@@ -330,14 +328,6 @@
             panelMain.ShadowDecoration.CustomizableEdges = customizableEdges28;
             panelMain.Size = new Size(950, 620);
             panelMain.TabIndex = 2;
-            // 
-            // vScrollBar1
-            // 
-            vScrollBar1.Location = new Point(913, -8);
-            vScrollBar1.Name = "vScrollBar1";
-            vScrollBar1.Size = new Size(17, 628);
-            vScrollBar1.TabIndex = 4;
-            vScrollBar1.Scroll += vScrollBar1_Scroll;
             // 
             // cardTotalMedicaments
             // 
@@ -576,6 +566,5 @@
             cardValeurStock.PerformLayout();
             ResumeLayout(false);
         }
-        private VScrollBar vScrollBar1;
     }
 }

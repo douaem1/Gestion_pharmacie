@@ -7,8 +7,17 @@ namespace gestion_pharmacie
     {
         public AjouterMedicament()
         {
-            this.AutoScroll = true;
             InitializeComponent();
+            this.AutoScaleMode = AutoScaleMode.None;
+            this.AutoScroll = true;
+            ConfigureScrolling();
+        }
+
+        private void ConfigureScrolling()
+        {
+            // Active le scroll automatique du formulaire
+            this.AutoScroll = true;
+            this.AutoScrollMinSize = new System.Drawing.Size(0, 800);
         }
 
         private void BtnAjouter_Click(object sender, EventArgs e)
@@ -100,17 +109,9 @@ namespace gestion_pharmacie
             dtpDateE.Value = DateTime.Today;
             dtpDateP.Value = DateTime.Today.AddYears(1);
             txtReference.Focus();
-        }
 
-        private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
-        {
-            // Décale tous les contrôles verticalement selon la valeur de la scrollbar
-            foreach (Control ctrl in this.Controls)
-            {
-                // On ignore la scrollbar elle-même
-                if (ctrl != vScrollBar1)
-                    ctrl.Top = ctrl.Top - (e.NewValue - e.OldValue);
-            }
+            // Remettre le scroll en haut après reset
+            this.AutoScrollPosition = new System.Drawing.Point(0, 0);
         }
     }
 }

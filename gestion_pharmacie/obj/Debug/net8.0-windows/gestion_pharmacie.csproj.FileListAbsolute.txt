@@ -176,3 +176,6 @@ C:\Users\hp\source\repos\Gestion_pharmacie\gestion_pharmacie\obj\Debug\net8.0-wi
 C:\Users\hp\source\repos\Gestion_pharmacie\gestion_pharmacie\obj\Debug\net8.0-windows\gestion_pharmacie.LoginForm.resources
 C:\Users\hp\source\repos\Gestion_pharmacie\gestion_pharmacie\obj\Debug\net8.0-windows\gestion_pharmacie.RegisterForm.resources
 C:\Users\hp\source\repos\Gestion_pharmacie\gestion_pharmacie\obj\Debug\net8.0-windows\gestion_pharmacie.AccueilForm.resources
+C:\Users\hp\source\repos\Gestion_pharmacie\gestion_pharmacie\obj\Debug\net8.0-windows\gestion_pharmacie.ModifierMedicament.resources
+C:\Users\hp\source\repos\Gestion_pharmacie\gestion_pharmacie\obj\Debug\net8.0-windows\gestion_pharmacie.RechercherMedicament.resources
+C:\Users\hp\source\repos\Gestion_pharmacie\gestion_pharmacie\obj\Debug\net8.0-windows\gestion_pharmacie.SupprimerMedicament.resources

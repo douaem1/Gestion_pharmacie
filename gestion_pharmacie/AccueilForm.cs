@@ -11,11 +11,7 @@ namespace gestion_pharmacie
         public AccueilForm()
         {
             InitializeComponent();
-            int formHeight = 600; // Hauteur totale du contenu (à adapter selon tes contrôles)
-            vScrollBar1.Minimum = 0;
-            vScrollBar1.Maximum = formHeight - this.ClientSize.Height;
-            vScrollBar1.SmallChange = 10; // défilement petit
-            vScrollBar1.LargeChange = 50; // défilement grand
+            panelMain.AutoScroll = true;
         }
 
         private void AccueilForm_Load(object sender, EventArgs e)
@@ -86,90 +82,19 @@ namespace gestion_pharmacie
             ResetButtonColors();
             btnRechercher.FillColor = Color.FromArgb(79, 82, 201);
 
-            // Créer un panel de recherche
-            Guna2Panel searchPanel = new Guna2Panel
+            RechercherMedicament formRechercher = new RechercherMedicament
             {
-                Size = new Size(900, 500),
-                Location = new Point(30, 30),
-                BorderRadius = 15,
-                FillColor = Color.White
+                TopLevel = false,
+                FormBorderStyle = FormBorderStyle.None,
+                AutoScaleMode = AutoScaleMode.None,
+                AutoSize = false,
+                Width = panelMain.Width - 40,
+                Height = panelMain.Height - 40
             };
 
-            Label lblTitle = new Label
-            {
-                Text = "🔍 Rechercher un Médicament",
-                Font = new Font("Segoe UI", 16, FontStyle.Bold),
-                ForeColor = Color.FromArgb(30, 41, 59),
-                Location = new Point(20, 20),
-                AutoSize = true
-            };
-
-            Guna2TextBox txtSearch = new Guna2TextBox
-            {
-                PlaceholderText = "Entrez le nom ou la référence du médicament...",
-                Size = new Size(600, 40),
-                Location = new Point(20, 70),
-                BorderRadius = 8
-            };
-
-            Guna2Button btnSearch = new Guna2Button
-            {
-                Text = "Rechercher",
-                Size = new Size(150, 40),
-                Location = new Point(640, 70),
-                BorderRadius = 8,
-                FillColor = Color.FromArgb(99, 102, 241)
-            };
-
-            Label lblResult = new Label
-            {
-                Text = "Entrez un terme de recherche pour commencer...",
-                Font = new Font("Segoe UI", 10),
-                ForeColor = Color.FromArgb(100, 116, 139),
-                Location = new Point(20, 130),
-                Size = new Size(850, 300),
-                BorderStyle = BorderStyle.FixedSingle,
-                Padding = new Padding(10)
-            };
-
-            btnSearch.Click += (s, ev) =>
-            {
-                string searchTerm = txtSearch.Text.Trim();
-                if (string.IsNullOrEmpty(searchTerm))
-                {
-                    MessageBox.Show("Veuillez entrer un terme de recherche.", "Attention",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                var medicaments = medicament.get_all_medicaments();
-                var results = medicaments.Where(m =>
-                    m.nom.ToLower().Contains(searchTerm.ToLower()) ||
-                    m.reference.ToLower().Contains(searchTerm.ToLower())
-                ).ToList();
-
-                if (results.Count == 0)
-                {
-                    lblResult.Text = "❌ Aucun médicament trouvé.";
-                }
-                else
-                {
-                    string resultText = $"✅ {results.Count} médicament(s) trouvé(s):\n\n";
-                    foreach (var med in results)
-                    {
-                        resultText += $"📦 {med.nom} (Réf: {med.reference})\n";
-                        resultText += $"   Stock: {med.quantite_stock} | Prix: {med.prix} DH\n";
-                        resultText += $"   Péremption: {med.dateP}\n\n";
-                    }
-                    lblResult.Text = resultText;
-                }
-            };
-
-            searchPanel.Controls.Add(lblTitle);
-            searchPanel.Controls.Add(txtSearch);
-            searchPanel.Controls.Add(btnSearch);
-            searchPanel.Controls.Add(lblResult);
-            panelMain.Controls.Add(searchPanel);
+            panelMain.Controls.Add(formRechercher);
+            formRechercher.Show();
+            formRechercher.FormClosed += (s, ev) => LoadDashboard();
         }
 
         // ➕ Bouton Ajouter
@@ -183,13 +108,14 @@ namespace gestion_pharmacie
             {
                 TopLevel = false,
                 FormBorderStyle = FormBorderStyle.None,
-                Dock = DockStyle.Fill
+                AutoScaleMode = AutoScaleMode.None,
+                AutoSize = false,
+                Width = panelMain.Width - 20,
+                Height = panelMain.Height - 20
             };
 
             panelMain.Controls.Add(formAjouter);
             formAjouter.Show();
-
-            // Rafraîchir le dashboard après la fermeture
             formAjouter.FormClosed += (s, ev) => LoadDashboard();
         }
 
@@ -200,15 +126,19 @@ namespace gestion_pharmacie
             ResetButtonColors();
             btnModifier.FillColor = Color.FromArgb(49, 110, 226);
 
-            Label lbl = new Label
+            ModifierMedicament formModifier = new ModifierMedicament
             {
-                Text = "✏️ Modifier un Médicament\n\n(Fonctionnalité à venir...)\n\nSélectionnez un médicament depuis la liste pour le modifier.",
-                Font = new Font("Segoe UI", 14, FontStyle.Bold),
-                ForeColor = Color.FromArgb(71, 85, 105),
-                AutoSize = true,
-                Location = new Point(50, 50)
+                TopLevel = false,
+                FormBorderStyle = FormBorderStyle.None,
+                AutoScaleMode = AutoScaleMode.None,
+                AutoSize = false,
+                Width = panelMain.Width - 20,
+                Height = panelMain.Height - 20
             };
-            panelMain.Controls.Add(lbl);
+
+            panelMain.Controls.Add(formModifier);
+            formModifier.Show();
+            formModifier.FormClosed += (s, ev) => LoadDashboard();
         }
 
         // 🗑️ Bouton Supprimer
@@ -218,15 +148,30 @@ namespace gestion_pharmacie
             ResetButtonColors();
             btnSupprimer.FillColor = Color.FromArgb(219, 58, 58);
 
-            Label lbl = new Label
+            // Créer le formulaire de suppression avec la nouvelle taille
+            SupprimerMedicament formSupprimer = new SupprimerMedicament
             {
-                Text = "🗑️ Supprimer un Médicament\n\n(Fonctionnalité à venir...)\n\nSélectionnez un médicament depuis la liste pour le supprimer.",
-                Font = new Font("Segoe UI", 14, FontStyle.Bold),
-                ForeColor = Color.FromArgb(71, 85, 105),
-                AutoSize = true,
-                Location = new Point(50, 50)
+                TopLevel = false,
+                FormBorderStyle = FormBorderStyle.None,
+                AutoScaleMode = AutoScaleMode.None,
+                AutoSize = false,
+                Width = 900,  // Largeur fixe adaptée au design
+                Height = 600  // Hauteur fixe adaptée au design
             };
-            panelMain.Controls.Add(lbl);
+
+            // Centrer le formulaire dans panelMain
+            int x = (panelMain.Width - formSupprimer.Width) / 2;
+            int y = (panelMain.Height - formSupprimer.Height) / 2;
+
+            // S'assurer que les coordonnées ne sont pas négatives
+            x = Math.Max(x, 0);
+            y = Math.Max(y, 0);
+
+            formSupprimer.Location = new Point(x, y);
+
+            panelMain.Controls.Add(formSupprimer);
+            formSupprimer.Show();
+            formSupprimer.FormClosed += (s, ev) => LoadDashboard();
         }
 
         // ⚠️ Bouton Alertes
@@ -246,7 +191,8 @@ namespace gestion_pharmacie
                     Size = new Size(900, 500),
                     Location = new Point(30, 30),
                     BorderRadius = 15,
-                    FillColor = Color.White
+                    FillColor = Color.White,
+                    AutoScroll = true
                 };
 
                 Label lblTitle = new Label
@@ -324,17 +270,6 @@ namespace gestion_pharmacie
             btnModifier.FillColor = Color.FromArgb(59, 130, 246);
             btnSupprimer.FillColor = Color.FromArgb(239, 68, 68);
             btnAlerte.FillColor = Color.FromArgb(245, 158, 11);
-        }
-
-        private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
-        {
-            // Décale tous les contrôles verticalement selon la valeur de la scrollbar
-            foreach (Control ctrl in this.Controls)
-            {
-                // On ignore la scrollbar elle-même
-                if (ctrl != vScrollBar1)
-                    ctrl.Top = ctrl.Top - (e.NewValue - e.OldValue);
-            }
         }
     }
 }
