@@ -69,6 +69,11 @@ namespace gestion_pharmacie
                 e.Handled = true;
             }
         }
+
+        private void lblTitre_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

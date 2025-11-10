@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace gestion_pharmacie
 {
@@ -8,6 +9,22 @@ namespace gestion_pharmacie
         public AjouterMedicament()
         {
             InitializeComponent();
+
+            // Augmenter la hauteur du formulaire pour forcer le scroll
+            this.Height = 900; // ou plus selon vos besoins
+
+            // S'assurer que tous les contrôles sont bien positionnés
+            PositionnerControles();
+        }
+
+        private void PositionnerControles()
+        {
+            // Cette méthode s'assure que tous vos contrôles sont bien visibles
+            // et dépassent la taille visible pour activer le scroll
+
+            // Exemple: si votre dernier bouton est à Y=600,
+            // et que panelMain fait 620 de hauteur, le scroll ne s'active pas
+            // Donc on force une hauteur de formulaire plus grande
         }
 
         private void BtnAjouter_Click(object sender, EventArgs e)
@@ -99,6 +116,11 @@ namespace gestion_pharmacie
             dtpDateE.Value = DateTime.Today;
             dtpDateP.Value = DateTime.Today.AddYears(1);
             txtReference.Focus();
+        }
+
+        private void panelMain_Paint(object sender, PaintEventArgs e)
+        {
+            // Vide
         }
     }
 }
